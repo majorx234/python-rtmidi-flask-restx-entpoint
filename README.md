@@ -14,3 +14,7 @@
 
 # Usage
 - `python main.py`
+
+# Tests
+- test Endpoint with:
+  - `curl -H "Content-Type: application/json" --request POST -d '{"status":"127","data1":"61","data2":"00"}' "http://ros-arion-linux.local:5000/midi_endpoint"`
