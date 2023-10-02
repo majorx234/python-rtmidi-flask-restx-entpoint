@@ -7,7 +7,6 @@ from resources.midi_endpoint import api as midi_endpoint_api_namespace
 
 app = Flask("Midi Endpoint")
 
-# erweiterung für cross origin requests
 CORS(app)
 
 api = Api(app,
@@ -18,7 +17,6 @@ api = Api(app,
           doc='/swagger-ui'
           )
 
-# zugänglich machen
 api.add_namespace(midi_endpoint_api_namespace)
 
 if __name__ == '__main__':

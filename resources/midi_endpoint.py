@@ -4,17 +4,13 @@ from http import HTTPStatus
 import rtmidi
 
 status = "ok"
-#midi_msg = [0x80, 60, 0]
+
 midiout = rtmidi.MidiOut(rtapi=rtmidi.API_UNIX_JACK)
 rtMidiOutputPorts = midiout.get_ports()
 if rtMidiOutputPorts:
     midiout.open_port(0)
 
 api = Namespace('midi_endpoint', description='game_ratings related operations')
-
-# www.laurasserver.de/midi_endpoint/
-# crud create read update delete: (POST,GET,PUT,DELETE) PGPD
-
 
 @api.route('')
 class MidiEndpoint(Resource):
